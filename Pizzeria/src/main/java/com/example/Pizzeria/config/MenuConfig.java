@@ -15,17 +15,32 @@ public class MenuConfig {
 
     @Bean
     public Pizza margherita() {
-        return new Pizza("Pizza Margherita", Arrays.asList("pomodoro", "mozzarella"), 1104, 4.99);
+        return new Pizza("Pizza Margherita", Arrays.asList("pomodoro", "mozzarella"), 1104, 4.99, "Normale");
     }
 
     @Bean
     public Pizza hawaiana() {
-        return new Pizza("Pizza Hawaiana", Arrays.asList("pomodoro", "mozzarella", "prosciutto", "ananas"), 1024, 6.49);
+        return new Pizza("Pizza Hawaiana", Arrays.asList("pomodoro", "mozzarella", "prosciutto", "ananas"), 1024, 6.49, "Normale");
     }
 
     @Bean
     public Pizza salame() {
-        return new Pizza("Pizza al Salame", Arrays.asList("pomodoro", "mozzarella", "salame"), 1160, 5.99);
+        return new Pizza("Pizza al Salame", Arrays.asList("pomodoro", "mozzarella", "salame"), 1160, 5.99, "Normale");
+    }
+
+    @Bean
+    public Pizza margheritaXL() {
+        return new Pizza("Pizza Margherita XL", Arrays.asList("pomodoro", "mozzarella"), 1500, 7.99, "XL");
+    }
+
+    @Bean
+    public Pizza hawaianaXL() {
+        return new Pizza("Pizza Hawaiana XL", Arrays.asList("pomodoro", "mozzarella", "prosciutto", "ananas"), 1400, 9.49, "XL");
+    }
+
+    @Bean
+    public Pizza salameXL() {
+        return new Pizza("Pizza al Salame XL", Arrays.asList("pomodoro", "mozzarella", "salame"), 1600, 8.99, "XL");
     }
 
     @Bean
@@ -70,7 +85,7 @@ public class MenuConfig {
 
     @Bean
     public Menu menu() {
-        List<Pizza> pizze = Arrays.asList(margherita(), hawaiana(), salame());
+        List<Pizza> pizze = Arrays.asList(margherita(), hawaiana(), salame(), margheritaXL(), hawaianaXL(), salameXL());
         List<Topping> toppings = Arrays.asList(formaggio(), prosciutto(), cipolle(), ananas(), salameTopping());
         List<Drink> bevande = Arrays.asList(limonata(), acqua(), vino());
         return new Menu(toppings, bevande, pizze);

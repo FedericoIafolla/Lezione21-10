@@ -17,19 +17,19 @@ public class Pizza {
         this.dimensione = dimensione;
     }
 
-    public String getName() {
+    public String getName() { // Corretto da getNome() a getName()
         return name;
     }
 
-    public List<String> getIngredients() {
+    public List<String> getIngredients() { // Aggiunto getIngredients()
         return ingredients;
     }
 
-    public int getCalories() {
+    public int getCalories() { // Corretto da getCalorie() a getCalories()
         return calories;
     }
 
-    public double getPrice() {
+    public double getPrice() { // Corretto da getPrezzo() a getPrice()
         return price;
     }
 
